@@ -67,8 +67,8 @@
 //  |           |           |           |           |           |           (           |           )           | PAGEUP    |   ^       |           | PRINTSCRN |           |
     &trans      &trans      &trans      &trans       &trans      &trans                              &trans     &kp PG_UP  &kp UP      &trans      &kp PSCRN   &trans
 //  |-----------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-//  |           |           |           |           |           |           (           |           )           |   <-      |   v       |  ->       |  DEL      | BKSPC     |
-    &trans      &trans      &trans      &trans      &trans      &trans                              &trans      &kp LEFT    &kp DOWN    &kp RIGHT   &kp DEL     &kp BSPC
+//  |           |           |PREV TRACK |PLAY/PAUSE |NEXT TRACK |           (           |           )           |   <-      |   v       |  ->       |  DEL      | BKSPC     |
+    &trans      &trans      &kp C_PREV  &kp C_PP    &kp C_NEXT  &trans                              &trans      &kp LEFT    &kp DOWN    &kp RIGHT   &kp DEL     &kp BSPC
 //  |-----------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 //  |           |           |           |           |           |           (           |           )           | PAGEDOWN  |           |           |           |           |
     &trans      &trans      &trans      &trans      &trans      &trans      &trans      &trans      &trans      &kp PG_DN   &trans      &trans      &trans      &trans
