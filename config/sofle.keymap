@@ -26,7 +26,7 @@
     &kp TAB     &kp A       &kp S       &kp D       &kp F       &kp G                               &kp H       &kp J       &kp K       &kp L       &kp SEMI    &kp SQT
 //  |-----------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 //  | SHIFT     |   Z       |   X       |   C       |   V       |   B       ( MUTE      |           )   N       |   M       |   ,       |   .       |   /       | SHIFT     |
-    &kp LSHFT   &kp Z       &kp X       &kp C       &kp V       &kp B       &kp C_PP    &none       &kp N       &kp M       &kp COMMA   &kp DOT     &kp FSLH    &kp RSHFT
+    &kp LSHFT   &kp Z       &kp X       &kp C       &kp V       &kp B       &kp C_MUTE  &none       &kp N       &kp M       &kp COMMA   &kp DOT     &kp FSLH    &kp RSHFT
 //  |-----------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 //                          |  GUI      |  ALT      | CTRL      | SPACE     | LOWER     | RAISE     | ENTER     | CTRL      |  ALT      |  GUI      |                
                             &kp LGUI    &kp LALT    &kp LCTRL   &kp SPACE   &mo 1       &mo 2       &kp RET     &kp RCTRL   &kp RALT    &kp RGUI
