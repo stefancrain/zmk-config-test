@@ -12,6 +12,7 @@
 #include <dt-bindings/zmk/ext_power.h>
 
 // German chars oh ja!
+#include "../zmk-nodefree-config/helper.h"
 #include "../zmk-nodefree-config/international_chars/german.dtsi"
 
 #define DEFAULT 0
