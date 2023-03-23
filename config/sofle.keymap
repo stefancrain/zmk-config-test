@@ -12,9 +12,12 @@
 #include <dt-bindings/zmk/ext_power.h>
 
 // German chars oh ja!
-ZMK_UNICODE_PAIR( de_ae,   N0, N0,  E, N4,   N0, N0,  C, N4 )
-ZMK_UNICODE_PAIR( de_oe,   N0, N0,  F, N6,   N0, N0,  D, N6 )
-ZMK_UNICODE_PAIR( de_ue,   N0, N0,  F,  C,   N0, N0,  D,  C )
+#include "../zmk-nodefree-config/international_chars/german.dtsi"
+
+#define DEFAULT 0
+#define LOWER   1
+#define RAISE   2
+#define GERMAN  3
 
 
 / {
@@ -36,8 +39,8 @@ ZMK_UNICODE_PAIR( de_ue,   N0, N0,  F,  C,   N0, N0,  D,  C )
 //  | SHIFT     |   Z       |   X       |   C       |   V       |   B       ( MUTE      |           )   N       |   M       |   ,       |   .       |   /       | SHIFT     |
     &kp LSHFT   &kp Z       &kp X       &kp C       &kp V       &kp B       &kp C_MUTE  &none       &kp N       &kp M       &kp COMMA   &kp DOT     &kp FSLH    &kp RSHFT
 //  |-----------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-//                          |  GUI      |  ALT      | CTRL      | SPACE     | LOWER     | RAISE     | ENTER     | CTRL      |  ALT      |  GUI      |                
-                            &kp LGUI    &kp LALT    &kp LCTRL   &kp SPACE   &mo 1       &mo 2       &kp RET     &kp RCTRL   &kp RALT    &kp RGUI
+//                          |  GUI      |  ALT      | CTRL      | SPACE     | LOWER     | RAISE     | ENTER     |           |           |           |                
+                            &kp LGUI    &kp LALT    &kp LCTRL   &kp SPACE   &mo LOWER   &mo RAISE   &kp RET     &mo GERMAN  &none		&none
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp PG_UP PG_DN>;
@@ -72,14 +75,36 @@ ZMK_UNICODE_PAIR( de_ue,   N0, N0,  F,  C,   N0, N0,  D,  C )
 //  |BTCLR      | BT1       | BT2       |  BT3      |  BT4      |  BT5      (           |           )           |           |           |           |           | POWER OFF |
     &bt BT_CLR  &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4                    &trans      &trans      &trans      &trans      &trans      &ext_power EP_OFF
 //  |-----------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-//  |           |           | DEU AE    | DEU OE    | DEU UE    |           (           |           ) POS1      |           | PAGEUP    | END       | PRINTSCRN |           |
-    &trans      &trans      &de_ae		&de_oe		&de_ue		&trans                              &trans     &trans      &kp PG_UP   &kp END     &kp PSCRN   &trans
+//  |           |           |           |           |           |           (           |           ) POS1      |           | PAGEUP    | END       | PRINTSCRN |           |
+    &trans      &trans      &trans 		&trans 		&trans		&trans                              &trans     &trans      &kp PG_UP   &kp END     &kp PSCRN   &trans
 //  |-----------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 //  |           |           |PREV TRACK |PLAY/PAUSE |NEXT TRACK |           (           |           ) <-        |   v       |   ^       |  ->       |           | BKSPC     |
     &trans      &trans      &kp C_PREV  &kp C_PP    &kp C_NEXT  &trans                              &kp LEFT    &kp DOWN    &kp UP      &kp RIGHT   &trans      &kp BSPC
 //  |-----------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 //  |           |           |           |           |           |           (           |           )           |           | PAGEDOWN  |           |          |           |
     &trans      &trans      &trans      &trans      &trans      &trans      &trans      &trans      &trans      &trans      &kp PG_DN   &trans      &trans      &trans
+//  |-----------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+//                          |           |           |           |           (           |           )           |           |           |           |
+                            &trans      &trans      &trans      &trans      &trans      &trans      &trans      &trans      &trans      &trans
+            >;
+
+            sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp PG_UP PG_DN>;
+        };
+
+        german_layer {  /* Oh ja! */
+            bindings = <
+//  |-----------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+//  |           |           |           |           |           |           (           |           )           |           |           |           |          |           |
+    &trans      &trans      &trans      &trans      &trans      &trans      &trans      &trans      &trans      &trans      &trans		&trans      &trans      &trans
+//  |-----------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+//  |           |     Ä     |     ß     |           |           |           (           |           )           |     Ü     |           |     Ö     |          |           |
+    &trans      &de_ae 		&de_eszett	&trans      &trans      &trans      &trans      &trans      &trans      &de_ue		&trans		&de_oe		&trans      &trans
+//  |-----------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+//  |           |           |           |           |           |           (           |           )           |           |           |           |          |           |
+    &trans      &trans      &trans      &trans      &trans      &trans      &trans      &trans      &trans      &trans      &trans		&trans      &trans      &trans
+//  |-----------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+//  |           |           |           |           |           |           (           |           )           |           |           |           |          |           |
+    &trans      &trans      &trans      &trans      &trans      &trans      &trans      &trans      &trans      &trans      &trans		&trans      &trans      &trans
 //  |-----------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 //                          |           |           |           |           (           |           )           |           |           |           |
                             &trans      &trans      &trans      &trans      &trans      &trans      &trans      &trans      &trans      &trans
