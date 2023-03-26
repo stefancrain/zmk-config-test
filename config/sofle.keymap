@@ -77,7 +77,7 @@
     &bt BT_CLR  &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4                    &trans      &trans      &trans      &trans      &trans      &ext_power EP_OFF
 //  |-----------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 //  |           |           |           |           |           |           (           |           ) POS1      |           | PAGEUP    | END       | PRINTSCRN |           |
-    &trans      &trans      &trans 		&trans 		&trans		&trans                              &trans     &trans      &kp PG_UP   &kp END     &kp PSCRN   &trans
+    &trans      &trans      &trans 		&trans 		&trans		&trans                              &kp HOME    &trans      &kp PG_UP   &kp END     &kp PSCRN   &trans
 //  |-----------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 //  |           |           |PREV TRACK |PLAY/PAUSE |NEXT TRACK |           (           |           ) <-        |   v       |   ^       |  ->       |           | BKSPC     |
     &trans      &trans      &kp C_PREV  &kp C_PP    &kp C_NEXT  &trans                              &kp LEFT    &kp DOWN    &kp UP      &kp RIGHT   &trans      &kp BSPC
