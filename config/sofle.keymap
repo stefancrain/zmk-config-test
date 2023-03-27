@@ -12,6 +12,7 @@
 #include <dt-bindings/zmk/ext_power.h>
 
 // German chars oh ja!
+#define HOST_OS 1  // set to 1 for Linux, default is 0 (Windows)
 #include "../zmk-nodefree-config/helper.h"
 #include "../zmk-nodefree-config/international_chars/german.dtsi"
 
@@ -92,7 +93,7 @@
             sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp PG_UP PG_DN>;
         };
 
-        german_layer {  /* Oh ja! */
+        german_layer {
             bindings = <
 //  |-----------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 //  |           |           |           |           |           |           (           |           )           |           |           |           |          |           |
