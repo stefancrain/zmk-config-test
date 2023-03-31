@@ -14,7 +14,7 @@
 // German chars oh ja!
 #define HOST_OS 1  // set to 1 for Linux, default is 0 (Windows)
 #include "../zmk-nodefree-config/helper.h"
-#include "../zmk-nodefree-config/international_chars/german.dtsi"
+#include "../zmk-nodefree-config/international_chars/german_alt.dtsi"
 
 #define DEFAULT 0
 #define LOWER   1
