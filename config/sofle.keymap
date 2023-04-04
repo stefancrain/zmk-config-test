@@ -97,13 +97,13 @@
             bindings = <
 //  |-----------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 //  |           |           |           |           |           |           (           |           )           |           |           |           |          |           |
-    &trans      &trans      &trans      &trans      &trans      &trans      &trans      &trans      &trans      &trans      &trans		&trans      &trans      &trans
+    &trans      &trans      &trans      &trans      &trans      &trans                              &trans      &trans      &trans		&trans      &trans      &trans
 //  |-----------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-//  |           |     Ä     |     ß     |           |           |           (           |           )           |     Ü     |           |     Ö     |          |           |
-    &trans      &de_ae 		&de_eszett	&trans      &trans      &trans      &trans      &trans      &trans      &de_ue		&trans		&de_oe		&trans      &trans
+//  |           |           |           |           |           |           (           |           )           |     Ü     |           |     Ö     |          |           |
+    &trans      &trans 		&trans  	&trans      &trans      &trans                              &trans      &de_ue		&trans		&de_oe		&trans      &trans
 //  |-----------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-//  |           |           |           |           |           |           (           |           )           |           |           |           |          |           |
-    &trans      &trans      &trans      &trans      &trans      &trans      &trans      &trans      &trans      &trans      &trans		&trans      &trans      &trans
+//  |           |     Ä     |     ß     |           |           |           (           |           )           |           |           |           |          |           |
+    &trans      &de_ae      &de_eszett  &trans      &trans      &trans                              &trans      &trans      &trans		&trans      &trans      &trans
 //  |-----------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 //  |           |           |           |           |           |           (           |           )           |           |           |           |          |           |
     &trans      &trans      &trans      &trans      &trans      &trans      &trans      &trans      &trans      &trans      &trans		&trans      &trans      &trans
