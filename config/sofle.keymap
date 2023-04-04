@@ -12,7 +12,7 @@
 #include <dt-bindings/zmk/ext_power.h>
 
 // German chars oh ja!
-#define HOST_OS 0  // set to 2 for MacOS/Win-Alt Codes
+#define HOST_OS 2  // set to 2 for MacOS/Win-Alt Codes
 #include "../zmk-nodefree-config/helper.h"
 #include "../zmk-nodefree-config/international_chars/german_alt.dtsi"
 
