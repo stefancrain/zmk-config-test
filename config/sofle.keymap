@@ -41,8 +41,8 @@
 //  | SHIFT     |   Z       |   X       |   C       |   V       |   B       ( MUTE      |           )   N       |   M       |   ,       |   .       |   /       | SHIFT     |
     &kp LSHFT   &kp Z       &kp X       &kp C       &kp V       &kp B       &kp C_MUTE  &none       &kp N       &kp M       &kp COMMA   &kp DOT     &kp FSLH    &kp RSHFT
 //  |-----------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-//                          |  GUI      |  ALT      | CTRL      | SPACE     | LOWER     | RAISE     | ENTER     |           |           |           |                
-                            &kp LGUI    &kp LALT    &kp LCTRL   &kp SPACE   &mo LOWER   &mo RAISE   &kp RET     &mo GERMAN  &none		&none
+//                          |  GUI      |  ALT      | CTRL      | SPACE     | LOWER     | RAISE     | ENTER     |           | RCTRL          |           |                
+                            &kp LGUI    &kp LALT    &kp LCTRL   &kp SPACE   &mo LOWER   &mo RAISE   &kp RET     &mo GERMAN  &kp RCTRL		&none
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp PG_UP PG_DN>;
