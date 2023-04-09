@@ -11,6 +11,9 @@
 // Power functions
 #include <dt-bindings/zmk/ext_power.h>
 
+// RGB
+#include <dt-bindings/zmk/rgb.h>
+
 // German chars oh ja!
 #define HOST_OS 0  // set to 0 for WindowsCompose
 #include "../zmk-nodefree-config/helper.h"
